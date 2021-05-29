@@ -1,0 +1,218 @@
+Forked Codepen: https://codepen.io/chazkiker/pen/PoNKrLo?editors=1100
+
+End-Goal: https://codepen.io/BritHemming/full/jONmxOm
+
+<!-- Questions to Submit in today's file first-lastname.txt --> 
+<!--
+Copy the questions below into the first-lastname.txt file on your github repo - answer each question and then push your changes. 
+
+    1. What is Semantic HTML? 
+      The practice of using markup to convey the meaning of elements and information 
+      rather than just creating the layout of a page.
+
+    2. What is HTML used for? 
+      HTML is the base-layer of web development, the building blocks of every website on the internet.
+      HTML is used to create and structure websites and applications.
+
+    3. What is an attribute and where do we put it? 
+      Attributes are additional or required characteristics (or properties, if you rather) of an element, usually formatted in key/value pairs.
+      They belong in the opening tag of an element.
+
+    4. What is the h1 tag used for? How many times should I use it on a page?
+      h1 tags are used for the biggest headline. Usually the h1 tag is used only once, reserved for the most important title or headline.
+
+    5. Name two tags that have required attributes
+      <img src="" alt="" /> 
+      <link href="">
+
+    6. What do we put in the head of our HTML document? 
+      • A link to an external stylesheet with CSS rules
+      • A title to display on the Tab of the browser
+      • Many times, a programmer might link a font in the head section
+
+    7. What is an id? 
+      An id is an attribute attached to an element that acts as a unique identifier ONLY for that element. 
+      These id attributes help with selection specificity.
+
+    8. What elements can I add an id to? 
+      Any and every element is able to accept an id. However, each element MUST have a unique id.
+
+    9. How many times can I use the same id on a page? 
+      Only the one time. Repeating id attributes is not appropriate.
+
+    10. What is a class? 
+      A class is an attribute used for selection specificity. The class attribute acts as an id for multiple elements.
+      It's mainly used to group elements together for certain style rules and is also helpful for organizing code.
+
+    11. What elements can I add a class to? 
+      Any and every element is able to accept a class. However, most programmers are very conscious about what elements are receiving which class.
+
+    12. How many times can I use the same class on a page? 
+      As many times as your heart desires.
+
+    13. How do I get my link to open in a new tab?
+      Add the attribute target="_blank" inside of your linking element. For instance, see below:
+        <a href="https://link.com" target="_blank">LINK</a>
+
+    14. What is the alt attribute in the image tag used for? 
+      The alt="" attribute is a required property in the image tag. It is used to convey textual context/information to any 
+      users who use a screen reader and cannot view the image itself. 
+      If you have a picture of the Twitter logo, you may set your alt attribute equal to "Twitter Logo"
+
+    15. How do I reference an id?
+      With the hashtag/pound symbol (or octothorpe, if you're fancy)
+      #id-name {
+        property: value;
+      }
+
+    16. What is the difference between a section and a div
+      A section is a semantic element which conveys meaning as to the purpose of the section itself. 
+      A div element would WORK instead of a section element, but the section element conveys exactly how that organizer will be used.
+
+    17. What is CSS used for? 
+      CSS is used to style HTML; the goal of CSS is to make everything on the webpage look clean, pretty, and perfect.
+    
+    18. How to we select an element? Example - every h2 on the page
+      By calling out that element and adding curly braces afterward. Example below:
+      h2 {
+        prop: val;
+      }
+
+    19. What is the difference between a class and an id? - Give me an example of when I might use each one
+      A class can be used multiple times on several elements, these are used to group certain elements together and select them all in CSS.
+      An id may only be used a single time on a single element. This is used to uniquely specify a single element. A class is not unique and usually applies to multiple elements.
+
+      An example use of an id: <div id="right-sidebar"></div>
+      This div might contain the right sidebar of site, so now they can manipulate this sidebar in their CSS by selecting via #right-sidebar.
+
+      An example use of a class: <div class="color-container"></div>
+      This div may be used in a style-guide that a programmer makes for themselves when working on a long project. It might have a color name, hex code, and a display of the color itself.
+      However, most style guides would have MULTIPLE colors. Thus, every single div containing a color name, code, and display can then be classed as a color-container and manipulated together in CSS via .color-container {}.
+
+
+    20. How do we select classes in CSS?
+      with a period
+      .class-selector {
+        prop: val;
+      }
+
+    21. How do we select a p element with a single class of “human””?
+      p.human {
+        prop: val;
+      }
+
+    22. What is a parent child selector? When would this be useful? 
+      The parent child selector is when you separate 2+ elements with a space, it selects all elements on the right 
+      that are descendants of the element on the left. 
+      For example: 
+      div p {} would select any p elements that are within a div element.
+
+      Additionally, there is the actual parent/child selector where you separate two elements by a greater than symbol (>).
+      So if you select (div>p{}) the selector will pick any p elements where their parent is a div element.
+
+      This is an extremely powerful selector in its use cases. Since every complex web page is full of winding nested elements, this selector 
+      allows for further specificity in the type of element you select. Wonderful stuff. A direct example would be selecting any <a> elements who have a parent of <nav>.
+
+    23. How do you select all links within a div with the class of sidebar?
+      div.sidebar link {
+        prop: val;
+      }
+
+    24. What is a pseudo selector?
+      A pseudo selector selects elements that are in a specific state. For instance, h1:hover{} would select any h1 element(s) WHEN they are in the hover state!
+
+    25. What do we use the change the spacing between lines?
+      line-height property!
+
+    26. What do we use to change the spacing between letters?
+        letter-spacing property 
+
+    27. What do we use to to change everything to CAPITALS? lowercase? Capitalize?
+      text-transform: uppercase; /* CAPITALS */
+      text-transform: lowercase; /* lowercase */
+      text-transform: capitalize; /* Capitalize */
+
+    28. How do I add a 1px border around my div that is dotted and black?
+      div {
+        border: 1px dotted black;
+      }
+
+    29. How do I select everything on the page? 
+      * {
+        prop: val;
+      }
+
+    30. How do I write a comment in CSS?
+      /* this is a comment in CSS */
+
+    31. How do I find out what file I am in, when I am using the command line? 
+      pwd
+
+    32. Using the command line - how do I see a list of files/folders in my current folder?
+      ls -l
+      note: you may also add (-a) to show hidden files/folders as well
+
+    33. How do I remove a file via the command line? Why do I have to be careful with this? 
+      rm ————— Deletes files (exercise caution because you cannot bring them back from the dead)
+      rm -r —————— Deletes recursively, meaning it can and will delete an entire directory along with everything in it (exercise caution b/c sometimes there is not a warning)
+      rmdir ————— Deletes a directory
+
+    34. Why should I use version control? 
+      Version control is essential for keeping track of changes on your own, but its real power comes into play in keeping track of changes 
+      for entire groups of team members. Additionally, version control allows the opportunity to revert back to past versions if it turns out there are bugs
+      in a newer version.
+
+    35. How often should I commit to github?
+      Very often! Definitely after finishing any functionality whatsoever, but also when between little edits and changes too.
+
+    36. What is the command we would use to push our repo up to github? 
+      git push -u origin <branch-name>
+
+    37. Walk me through Lambda's git flow. 
+      1 Fork the repo —— save a personal copy
+      2 Add the TL as a collaborator —— settings>manage access> invite a collaborator
+      3 Clone the forked repo —— [ git clone <link> ] 
+      4 Enter the local repo —— cd <RepoName>
+      5 Add a branch —— [ git checkout -b 'firstname-lastname' ] to create a new branch
+      6 Make Elon Blush —— go make changes and kill it on your project
+      7 Add changes to stage —— [ git add . ]
+      8 Commit changes to branch —— [ git commit -m "Helpful commit message" ]
+      9 Push the commit back to GitHub —— [ git push -u origin <branch-name> ]
+      10 Submit a pull request back to forked repo (MAKE SURE IT'S THE RIGHT BASE) —— wait for TL (or team member, as the case may be) to review code, approve changes, and (hopefully) merge your pull request
+
+Stretch Questions
+
+    1. What is the difference between an inline element and a block element?
+      The biggest difference is that inline elements appear side by side while block elements will take up the extent of their parent container's width (thus stacking on top of one another)
+    
+    2. What happens when an element is positioned absolutely? 
+      That element will no longer exist in the normal document flow! It will sit on it's own layer separate (and often on top of) everything else.
+    
+    3. How do I make an element take up only the amount of space it needs but also have the ability to give it a width? 
+      Flexbox, baby. [ display: flex ] will be your savior in this situation. There's really no other technique for this problem that I could think of.
+
+    4. Name 3 elements that are diplay block by default, 2 elements that are display inline by default and 1 element that is display inline-block by default
+      display block by default:
+        1 <p>
+        2 <div>
+        3 <fpr,>
+      display inline by default:
+        1 <span> 
+        2 <a>
+      display inline-block by default:
+        1. <button> (I think?)
+    
+    5. In your own words, explain the box model. What is the "fix" for the box model, in other words, how do we make all elements respect the width we've given them? 
+      The box model is HTML's fun little way of organizing elements and their content. The model is made up of the following layers: 
+      • The content itself
+      • Padding between the content & the border
+      • The border around the padding
+      • Margin surrounding the border, the layer of space between this content box's border and another box.
+
+      The magic fix for making box models listen to the given width is this little statement:
+         box-sizing: border-box;
+      Changing the box-sizing to border-box will overrule the default content-box setup and the width of the border-box will 
+      include any border or padding in its innate sizing, thus absorbing the extra width. 
+
+
+   --> 
